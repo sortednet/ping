@@ -115,7 +115,7 @@
                 </plugin>
 
                 <!-- Create the docker image -->
-                <plugin>
+                <!-- <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>0.4.10</version>
@@ -132,12 +132,12 @@
                                 <workdir>/</workdir>
                                 <cmd>["/start-ping.sh"]</cmd>
                                 <resources>
-                                    <resource> <!-- Copy the spring boot jar to Image -->
+                                    <resource> Copy the spring boot jar to Image
                                         <targetPath>/</targetPath>
                                         <directory>${project.build.directory}</directory>
                                         <include>${project.build.finalName}.jar</include>
                                     </resource>
-                                    <resource> <!-- Copy the start script to Image - NB classes used in case we need to filter this later -->
+                                    <resource> Copy the start script to Image - NB classes used in case we need to filter this later
                                         <targetPath>/</targetPath>
                                         <directory>${project.build.directory}/classes</directory>
                                         <include>start-reverse-service.sh</include>
@@ -161,14 +161,14 @@
                                 <goal>push</goal>
                             </goals>
                             <configuration>
-                                <!-- useConfigFile requires that docker login has already been run on the machine doing the build -->
+                                useConfigFile requires that docker login has already been run on the machine doing the build
                                 <useConfigFile>false</useConfigFile>
                                 <serverId>docker-hub</serverId>
                                 <imageName>sortednet/ping:${project.version}</imageName>
                             </configuration>
                         </execution>
                     </executions>
-                </plugin>
+                </plugin> -->
             </plugins>
 
     </build>
