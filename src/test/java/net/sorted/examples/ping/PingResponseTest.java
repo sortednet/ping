@@ -1,7 +1,7 @@
 package net.sorted.examples.ping;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.IntegrationTest;
+
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
